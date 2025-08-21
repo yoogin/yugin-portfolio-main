@@ -47,7 +47,7 @@ button:focus {outline: none}
       }
     .wrap {background: #FBF7F4; letter-spacing: -0.02em; font-family: 'Pretendard', sans-serif; line-height: 1.5;}
     .inner {width: 85%; margin: 0 auto;}
-    section {height: 100vh;}
+    section {height: 100vh;background: #FBF7F4;}
     .en {
         font-family:  'Benne', serif;
         display: inline-block;
@@ -87,7 +87,7 @@ button:focus {outline: none}
 .scroll section { width: 100vw; height: 100vh;flex-shrink: 0;} */
 
     /* main */
-    .main {position: relative; width: 100vw;}
+    .main {position: relative; }
     .main .inner {width: 70%;}
     .main .inner {display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;}
     h2 {display: inline-block; margin: 0; padding: 0; line-height: 1; }
@@ -113,7 +113,7 @@ button:focus {outline: none}
     .main img {width: 100%; height: 100%;}
 
     /* Aboutme */
-    .aboutMe .all {position: relative; overflow: hidden;}
+    .aboutMe .all {position: relative;}
 
     .aboutMe .all::after {
         content: '';
@@ -124,10 +124,11 @@ button:focus {outline: none}
         background: #F9DBE9;
         border: 1px solid #000;
         z-index: 0;
+        overflow: hidden;
     }
     .aboutMe .all .checkline {overflow: hidden; max-width: 100%; position: relative; z-index: 10;}
     .aboutMe .checkline .img { width: 100%; height: auto; display: block;}
-
+    .aboutMe .all .inner .imgBox .img img {width: 100%; height: 100%;}
     .aboutMe .all .inner {
         display: flex;
         justify-content: space-between;
@@ -142,6 +143,7 @@ button:focus {outline: none}
 
     .aboutMe .all .inner .textBox {width: 60%; position: relative;}
     .aboutMe .all .inner .textBox .tit {display: flex; justify-content: left; align-items: center; margin-top: 6%;}
+    .aboutMe .all .inner .textBox .tit .textImg img {width: 100%;}
     .aboutMe .all .inner .textBox .tit .en {font-size: 220px; padding-top: 174px;}
     .aboutMe .all .inner .textBox .tit .img {display: flex; align-items: center;margin: 0 -142px 0 0;}
     .aboutMe .all .inner .textBox .subtit.I {position: absolute; top: 13%; right: 84%;}
@@ -232,11 +234,35 @@ button:focus {outline: none}
 .aboutMe03 ul.hobbies li .imgBox a:nth-child(2) {position: absolute; top: 0; left: 0;z-index: 10;}
 .aboutMe03 ul.hobbies li .imgBox p.img img {width: 100%; height: 100%; display: block; border: 1px solid #000;}
 
+.hobbies .imgBox .img {position: relative;}
+
+.hobbies .imgBox .img img {
+    display: block;
+    width: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* 두 번째 이미지 hover 효과 */
+.hobbies .imgBox .img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* 초기에는 안 보이게 */
+    background: rgba(0,0,0,0.3); z-index: 2; transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* hover 시 나타나게 */
+.hobbies li:hover .imgBox .img:nth-child(2) {
+    opacity: 1;
+    transform: translateY(-10%); /* 살짝 올라오는 느낌 */
+}
 
 .aboutMe03 ul.hobbies li .imgBox a:nth-child(2) img {background-color: rgba(0, 0, 0, 0.5);}
 .aboutMe03 ul.hobbies li:nth-child(1) .imgBox a:nth-child(2) {top: 188px; left: 13px;}
 .aboutMe03 ul.hobbies li:nth-child(2) .imgBox a:nth-child(2) {top:89px; left: 178px;}
-.aboutMe03 ul.hobbies li:nth-child(3) .imgBox a:nth-child(2) {top: 56px; left: 8px;}
+.aboutMe03 ul.hobbies li:nth-child(3) .imgBox a:nth-child(2) {top: 16%; left: 1%;}
 
 .aboutMe03 ul.hobbies li:nth-child(3)::before {content: ''; width: 104vw; height: 45vh; background-color: #F9DBE9; position: absolute; top: 94%; left: 29%;transform: translateX(-50%); z-index: -1;}
 
@@ -295,6 +321,13 @@ width: 100%; display: flex; flex-wrap: nowrap; justify-content: center;}
 .workIntro .inner ul.sub li:nth-child(1) .flower {position: absolute; top: -40%; right: 87%;}
 .workIntro .inner ul.sub li:nth-child(2) .flower {position: absolute; top: -38%; right: -3%;}
 .workIntro .inner ul.sub li:nth-child(3) .flower {position: absolute; top: 61%; right: -12%;}
+
+
+/* imgAll */
+.imgAll > * {
+    opacity: 0;
+    transform: translateY(50px); /* 아래에서 시작 */
+  }
 
 .work1 .tit, .work2 .tit, .work3 .tit {display: inline-block; background: #FBE3A4; padding: 5px 25px; border-radius: 50px;  font-weight: 700; border: 1px solid #000; -webkit-text-stroke: 1px black; color: #F07BB0; display: inline-block;}
 .work1 .txt, .work2 .txt, .work3 .txt {    border: 1px solid #000;
@@ -386,11 +419,12 @@ width: 100%; display: flex; flex-wrap: nowrap; justify-content: center;}
 .work1 .workImg5 {width: 48.5%;}
 .work1 .workImg5 img {width: 100%; height: 100%;}
 .work1 .workImg6 {width: 100%; height: auto; margin-top: 45px; display: flex; justify-content: center;}
-.work1 .workImg6 img {border: none;}
+.work1 .workImg6 img {border: none; width: 100%; height: 100%;}
 
 /* work2 */
 .work2 {height: 445vh; position: relative;}
 .work2 .circleLine {overflow: hidden;}
+.work2 .inner .topBox ul.open li a {display: flex;justify-content: center; align-items: center;}
 .work2 .inner {position: relative;}
 .work2 .inner .topBox {margin-top: 100px; margin-bottom: 20px;}
 .work2 .inner .workTitle {display: inline-block;}
@@ -453,7 +487,8 @@ width: 100%; display: flex; flex-wrap: nowrap; justify-content: center;}
 .work2 .textImg .workImg2 img {width: 100%; height: 100%;}
 
 .work2 .workImg3 {margin-top: 45px; display: flex; justify-content: space-between;}
-.work2 .workImg3 img {width: 100%; height: 100%;}
+.work2 .workImg3 .inside {width: 32%;}
+.work2 .workImg3 .inside img {width: 100%; height: 100%;}
 
 .work2 .threePoint {display: flex; justify-content: space-between; margin-top: 45px;}
 .work2 .threePoint .workImg4 {width: 55%;}
@@ -470,6 +505,8 @@ width: 100%; display: flex; flex-wrap: nowrap; justify-content: center;}
 .work3 .circleLine {overflow: hidden;}
 .work3 .inner {position: relative;}
 .work3 .inner .topBox {margin-top: 100px; margin-bottom: 20px;}
+.work3 .inner .topBox ul.open li a {display: flex;justify-content: center; align-items: center;}
+
 .work3 .inner .workTitle {display: inline-block;}
 .work3 .inner .workTitle .subtit.first {
     font-size: 52px; 
@@ -534,7 +571,7 @@ width: 100%; display: flex; flex-wrap: nowrap; justify-content: center;}
 .work3 .threePoint .workImg5 img {width: 100%; height: 100%;}
 
 .work3 .threePoint .workImg6{width: 42%;    display: flex;justify-content: center;}
-
+.work3 .threePoint .workImg6 img {border: none;}
 .work2 .threePoint .workImg5 {width: 100%; height: auto;}
 .work2 .threePoint .workImg5 img {width: 100%; height: 100%;}
 
@@ -569,15 +606,61 @@ width: 100%; display: flex; flex-wrap: nowrap; justify-content: center;}
 .clone {height: 400vh;}
 .clone .coding.ystudio {position: relative;}
 .clone .coding.ystudio .img {display: flex; justify-content: center; margin-left: 18%;}
+
 .clone .coding.ystudio .line {width: 28%; position: absolute; top: 51%; right: 55%;}
 .clone .coding.happiert {position: relative;}
 .clone .coding.happiert .img {display: flex; justify-content: left; margin: 8% 0 0 12%;}
+
 .clone .coding.happiert .line {width: 28%; position: absolute; top: 51%; right: 34%;}
 .clone .coding.deabang {position: relative;}
 .clone .coding.deabang .img {display: flex; justify-content: center; margin: 4% 6% 0 0;}
+
 .clone .coding.deabang .line {width: 28%; position: absolute; top: 51%; right: 61%; transform: rotate(-34deg);}
 .clone .coding.crewala {position: relative;}
 .clone .coding.crewala .img {display: flex; justify-content: left; margin: 13% 0 0 18%;}
 .clone .coding.crewala .line {width: 28%; position: absolute; top: 76%; right: 16%;}
 .clone .coding.musign {position: relative;}
 .clone .coding.musign .img {display: flex; justify-content: left; margin: 3% 0 0 10%;}
+
+
+
+
+/* 반응형 */
+@media screen and (max-width: 1700px) {
+    /* br {display: none;} */
+    .subtit {font-size: 40px; line-height: 1.3;}
+    .main .inner .maintit h2 .textImg {width: 68%;}
+    .main .inner .subtit {font-size: 42px;}
+    .main .inner .subtit.year {top: 29%; left: 49%;}
+    .main .inner .subtit.designer {top: 58%; right: 23%;}
+    .main .circle {top: 29%; right: 17%;}
+    .main .flowerB {top: 30%; right: 27%;}
+    .main .light {top: 67%; right: 41.5%;}
+    .main .circleP2 {top: 85%; right: 53%;}
+
+    .aboutMe .all .inner .textBox .subtit.name {top: 37%; right: 3%;}
+    .aboutMe .all .inner .textBox .txt {font-size: 20px; margin-top: 8%;}
+}
+
+@media screen and (max-width: 1440px) {
+    .aboutMe .all .inner .textBox .txt {font-size: 18px; margin-top: 13%;}
+    .aboutMe .all .inner .imgBox {width: 50%;}
+    .aboutMe .all::after {height: 93%;}
+}
+
+
+@media screen and (max-width: 1340px) {
+    
+    .aboutMe .all .inner .imgBox .img img {width: 100%; height: 100%;}
+    .aboutMe .all .inner .textBox .tit .textImg {width: 100%;}
+    .aboutMe .all .inner .textBox .subtit.name {top: 33%; right: 3%;}
+    .aboutMe .all .inner .textBox .txt {font-size: 18px;}
+    .subtit {font-size: 36px;}
+
+    .clone .coding .img img {width: 100%; height: 100%;}
+    
+}
+@media screen and (max-width: 1024px) {
+    .clone .coding .img img {width: 100%; height: 100%;}
+    
+}
