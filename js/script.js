@@ -251,41 +251,12 @@ window.addEventListener('load', () => {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   AOS.init({
-//     duration: 1000,
-//     once: false
-//   });
-// });
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// gsap.to(".workImg1", {
-//   scrollTrigger: {
-//     trigger: ".imgAll",
-//     start: "top 10%",   // 화면의 80% 지점 들어올 때 시작
-//     end: "top 30%",     // 화면의 30% 지점 도달할 때 끝
-//     scrub: true,        // 스크롤 진행률과 애니메이션을 싱크
-//     markers: true,   // 디버그용 가이드라인 (확인 후 지우면 됨)
-//   },
-//   opacity: 1,
-//   y: 0,
-//   duration: 1
-// });
-
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.utils.toArray(".imgAll > *").forEach((el) => {
-  gsap.to(el, {
-    scrollTrigger: {
-      trigger: el,       // 각 요소를 트리거로
-      start: "top 80%",  // 화면 80% 지점에 들어올 때 시작
-      end: "top 60%",    // 화면 60% 지점에 도달하면 끝
-      scrub: true,       // 스크롤 진행률과 애니메이션 싱크
-      // markers: true,  // 디버그용
-    },
-    opacity: 1,
-    y: 0,
-    duration: 1
-  });
+// AOS 라이브러리 초기화
+document.addEventListener("DOMContentLoaded", function() {
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 1000,
+      once: false
+    });
+  }
 });
