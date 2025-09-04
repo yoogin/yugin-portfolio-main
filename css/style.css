@@ -608,8 +608,10 @@ width: 100%; display: flex; flex-wrap: nowrap; justify-content: center;}
 .clone .coding.ystudio {position: relative;}
 .clone .coding.ystudio .img-wrap {position: relative;}
 .clone .coding.ystudio .img-wrap .img {display: flex; justify-content: center; margin-left: 18%; position: relative;}
-.clone .coding.ystudio .img-wrap .overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex;align-items: center;
-justify-content: center; opacity: 1;transition: all 0.3s ease; color: #F2A8CE;  padding: 12px 18px; border-radius: 20px; background: #000; }
+.clone .coding.ystudio .img-wrap .overlay {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; display: flex;align-items: center;
+justify-content: center; opacity: 1;transition: all 0.3s ease; color: #F2A8CE; }
+.clone .coding.ystudio .img-wrap .overlay a {display: inline-block;  padding: 12px 18px; border-radius: 40px;  background: #FBE3A4; font-weight: bold; font-size: 20px; width: 9%;}
+
 
 
 
