@@ -607,29 +607,55 @@ width: 100%; display: flex; flex-wrap: nowrap; justify-content: center;}
 .clone {height: auto; min-height: 400vh;}
 .clone .coding.ystudio {position: relative;}
 .clone .coding.ystudio .img-wrap {position: relative; overflow: hidden;}
-.clone .coding.ystudio .img-wrap .img {display: flex; justify-content: center; margin-left: 18%; position: relative;}
+.clone .coding.ystudio .img-wrap .img {display: flex; justify-content: center; margin-left: 18%; position: relative; opacity: 1;}
 .clone .coding.ystudio .img-wrap .overlay {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; display: flex;align-items: center;
-justify-content: center; opacity: ;transition: all 0.3s ease; color: #F2A8CE; }
+justify-content: center; opacity: 0;transition: all 0.3s ease; color: #F2A8CE; }
 .clone .coding.ystudio .img-wrap .overlay a {display: inline-block;  padding: 12px 18px; border-radius: 40px;  background: #FBE3A4; font-weight: bold; font-size: 20px; width: 9%;}
-.clone .coding.ystudio .img-wrap:hover 
+.clone .coding.ystudio .img-wrap:hover .img img {opacity: 0.5;}
 .clone .coding.ystudio .img-wrap:hover .overlay {opacity: 1; }
 .clone .coding.ystudio .line {width: 28%; position: absolute; top: 51%; right: 55%;}
 
 
 .clone .coding.happiert {position: relative;}
 .clone .coding.happiert {position: relative;}
-.clone .coding.happiert .img {display: flex; justify-content: left; margin: 8% 0 0 12%;}
-
+.clone .coding.happiert .img {display: flex; justify-content: left; margin: 8% 0 0 12%; position: relative;}
+.clone .coding.happiert .img-wrap .overlay {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; display: flex;align-items: center;
+justify-content: center; opacity: 0;transition: all 0.3s ease; color: #F2A8CE; }
+.clone .coding.happiert .img-wrap .overlay a {display: inline-block;  padding: 12px 18px; border-radius: 40px;  background: #FBE3A4; font-weight: bold; font-size: 20px; width: 9%;}
+.clone .coding.happiert .img-wrap:hover .img img {opacity: 0.5;}
+.clone .coding.happiert .img-wrap:hover .overlay {opacity: 1; }
+.clone .coding.happiert .line {width: 28%; position: absolute; top: 51%; right: 55%;}
 .clone .coding.happiert .line {width: 28%; position: absolute; top: 51%; right: 34%;}
-.clone .coding.deabang {position: relative;}
-.clone .coding.deabang .img {display: flex; justify-content: center; margin: 4% 6% 0 0;}
 
+
+.clone .coding.deabang {position: relative;}
+.clone .coding.deabang .img {display: flex; justify-content: center; margin: 4% 6% 0 0; position: relative;}
+.clone .coding.deabang .img-wrap .overlay {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; display: flex;align-items: center;
+justify-content: center; opacity: 0;transition: all 0.3s ease; color: #F2A8CE; }
+.clone .coding.deabang .img-wrap .overlay a {display: inline-block;  padding: 12px 18px; border-radius: 40px;  background: #FBE3A4; font-weight: bold; font-size: 20px; width: 9%;}
+.clone .coding.deabang .img-wrap:hover .img img {opacity: 0.5;}
+.clone .coding.deabang .img-wrap:hover .overlay {opacity: 1; }
 .clone .coding.deabang .line {width: 28%; position: absolute; top: 51%; right: 61%; transform: rotate(-34deg);}
+
+
 .clone .coding.crewala {position: relative;}
-.clone .coding.crewala .img {display: flex; justify-content: left; margin: 13% 0 0 18%;}
+.clone .coding.crewala .img {display: flex; justify-content: left; margin: 13% 0 0 18%; position: relative;}
+.clone .coding.crewala .img-wrap .overlay {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; display: flex;align-items: center;
+justify-content: center; opacity: 0;transition: all 0.3s ease; color: #F2A8CE; }
+.clone .coding.crewala .img-wrap .overlay a {display: inline-block;  padding: 12px 18px; border-radius: 40px;  background: #FBE3A4; font-weight: bold; font-size: 20px; width: 9%;}
+.clone .coding.crewala .img-wrap:hover .img img {opacity: 0.5;}
+.clone .coding.crewala .img-wrap:hover .overlay {opacity: 1; }
 .clone .coding.crewala .line {width: 28%; position: absolute; top: 76%; right: 16%;}
+
+
 .clone .coding.musign {position: relative;}
-.clone .coding.musign .img {display: flex; justify-content: left; margin: 3% 0 0 10%;}
+.clone .coding.musign .img {display: flex; justify-content: left; margin: 3% 0 0 10%; position: relative;}
+.clone .coding.musign .img-wrap .overlay {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; display: flex;align-items: center;
+justify-content: center; opacity: 0;transition: all 0.3s ease; color: #F2A8CE; }
+.clone .coding.musign .img-wrap .overlay a {display: inline-block;  padding: 12px 18px; border-radius: 40px;  background: #FBE3A4; font-weight: bold; font-size: 20px; width: 9%;}
+.clone .coding.musign .img-wrap:hover .img img {opacity: 0.5;}
+.clone .coding.musign .img-wrap:hover .overlay {opacity: 1; }
+
 
 /* contact */
 .contact {position: relative; width: 100%; background: url("../img/contact_bg.svg") no-repeat center bottom/contain; display: flex; align-items: flex-start;  justify-content: center; margin-top: 5%;}
