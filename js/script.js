@@ -34,6 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    
     // main(.main)이나 contact(.contact)에서는 active 제거
     const main = document.querySelector(".main");
     const contact = document.querySelector(".contact");
@@ -228,18 +229,8 @@ window.addEventListener('load', () => {
       }
     });
 
-    // 1) 이미지 등장
-    if (img) {
-      tl.from(img, {
-        autoAlpha: 0,
-        y: 40,
-        duration: 0.6,
-        ease: "power2.out",
-        immediateRender: false
-      });
-    }
 
-    // 2) 선 그리기 (여러 path면 순차로)
+    // 선 그리기 
     if (paths.length) {
       tl.to(paths, {
         strokeDashoffset: 0,
