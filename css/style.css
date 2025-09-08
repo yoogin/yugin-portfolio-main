@@ -398,10 +398,10 @@ width: 100%; display: flex; flex-wrap: nowrap; justify-content: center;}
 
 .work1 .textImg {display: flex; justify-content: space-between; margin-top: 45px;}
 .work1 .textImg .text {width: 48.5%;}
-.work1 .textImg .text1 .tit {font-size: 27px; position: absolute; z-index: 10; top: 25%; right: 78%;}
+.work1 .textImg .text1 .tit {font-size: 27px; position: absolute; z-index: 10; top: 20%; right: 78%;}
 .work1 .textImg .text1 .txt {font-size: 22px; position: absolute; text-align: left; top: 26%; right: 53%;  z-index: 5; width: 39%;}
-.work1 .textImg .text2 .tit {font-size: 27px; position: absolute; z-index: 10; top: 31% ; right: 37%;}
-.work1 .textImg .text2 .txt {font-size: 22px; position: absolute; text-align: left; top: 32%; right: 39%;  z-index: 5; width: 44%;}
+.work1 .textImg .text2 .tit {font-size: 27px; position: absolute; z-index: 10; top: 59% ; right: 37%;}
+.work1 .textImg .text2 .txt {font-size: 22px; position: absolute; text-align: left; top: 65%; right: 38%;  z-index: 5; width: 44%;}
 .work1 .textImg .workImg2 {width: 48.5%;}
 .work1 .textImg .workImg2 img {width: 100%; height: 100%;}
 
